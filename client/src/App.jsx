@@ -587,6 +587,7 @@ function App() {
           <span>Big dreams start somewhere small.</span>
           <span className="footer-copyright">© 2026 Pratibha Festival</span>
         </div>
+        <div className="footer-credit">SIVASANKARI G (2315032)</div>
       </footer>
       <a
         className={`mobile-register-cta ${showMobileRegister ? 'mobile-register-visible' : ''}`}

@@ -269,6 +269,7 @@ h1, h2, h3, p { margin-top: 0; }
 .footer-wrap > span { color: #a0a298; font: italic 11px Georgia, serif; }
 .footer-wrap .footer-copyright { font: 9px 'DM Sans', sans-serif; }
 .footer-wrap .brand { font-size: 16px; }.footer-wrap .brand-mark { width: 25px; height: 25px; border-radius: 8px; }.footer-wrap .brand-mark svg { width: 14px; }
+.footer-credit { padding: 0 20px 16px; color: #a0a298; font: 9px 'DM Sans', sans-serif; text-align: center; }
 .mobile-register-cta { display: none; }
 
 @media (min-width: 1200px) {
