@@ -21,6 +21,9 @@ import {
 } from 'lucide-react'
 import Swal from 'sweetalert2'
 
+const API_BASE_URL = import.meta.env.VITE_API_URL?.replace(/\/$/, '')
+  || (import.meta.env.DEV ? '' : 'https://pratibha-kaira-tech.onrender.com')
+
 const competitions = [
   {
     id: 'singing',
@@ -141,7 +144,7 @@ function getRegistrationProgress(form, age) {
 }
 
 async function requestRegistrationCounts() {
-  const response = await fetch('/api/registrations/counts')
+  const response = await fetch(`${API_BASE_URL}/api/registrations/counts`)
   const result = await response.json().catch(() => ({}))
   if (!response.ok || !result.counts || typeof result.counts !== 'object') {
     throw new Error(result.message || 'Registration counts are unavailable right now.')
@@ -283,7 +286,7 @@ function App() {
       didOpen: () => Swal.showLoading(),
     })
     try {
-      const response = await fetch('/api/registrations', {
+      const response = await fetch(`${API_BASE_URL}/api/registrations`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, age, ageGroup }),
